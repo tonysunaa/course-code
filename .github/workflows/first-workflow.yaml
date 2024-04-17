@@ -18,9 +18,9 @@ jobs:
         run: sw_vers
   dependant-job:
     runs-on: windows-latest
-    needs: [run-shell-commands]
+    needs: run-shell-commands
     steps: 
       - name: echo a string
         run: Write-Ouput "Windows String"
-      = name: Error Step
+      - name: Error Step
         run: doesnotexits
